@@ -7,7 +7,7 @@ All instructions required for testing the different algorithms can be found in t
 
 ## Prerequisites
 
-To follow this tutorial a linux machine with gcc compiler driver. 
+To follow this tutorial you will need a linux machine with the gcc compiler driver. 
 
 ## How to use the program
 The program presents 26 image processing algorithms. Lets suppose we want to binarize the image _lena.pgm_ in the folder _ImageProcessing/images_
