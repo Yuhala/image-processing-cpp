@@ -43,7 +43,6 @@ You can open this output file to view the output and make sure its coherent.
 
 * **Peterson Yuhala** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
 ## License
 
