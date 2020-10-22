@@ -26,11 +26,11 @@ sudo g++ main.cpp Image.cpp -o app
 - Below is a list of some of the operations provided by the program and how you can test them on images. 
 ### Logic Operations (6)
 - Image binarization based on Otso's thresholding algorithm: `./app otsuBinarize images/lena.pgm`
-![alt-lena](fig/lena.pgm) ![alt-lena-otsu](fig/otsubin.pgm)
+![alt-lena](fig/lena.png) ![alt-lena-otsu](fig/otsubin.png)
 - Logic NOT: `./app not images/lena.pgm`
-![alt-lena](fig/lena.pgm) ![alt-not-lena](fig/notlena.pgm)
+![alt-lena](fig/lena.png) ![alt-not-lena](fig/notlena.png)
 - Logic XOR: `./app images/lena.pgm xor images/aya.pgm`
-![alt-lena](fig/lena.pgm) ![alt-aya](fig/aya.pgm) ![alt-lena-xor-aya](fig/lenaXORaya.pgm)
+![alt-lena](fig/lena.png) ![alt-aya](fig/aya.png) ![alt-lena-xor-aya](fig/lenaXORaya.png)
 
 
 
