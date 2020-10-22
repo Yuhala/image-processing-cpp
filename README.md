@@ -25,7 +25,7 @@ sudo g++ main.cpp Image.cpp -o app
 - The image resulting from each operation is generated in the `output.pgm`
 - Below is a list of some of the operations provided by the program and how you can test them on images. 
 ### Logic Operations (6)
-- Image binarization based on Otso's thresholding algorithm: `./app otsuBinarize images/lena.pgm`<br/>
+- Image binarization based on Otsu's thresholding algorithm: `./app otsuBinarize images/lena.pgm`<br/>
 
 ![alt-lena](ImageProcessing/fig/lena.png) ![alt-lena-otsu](ImageProcessing/fig/otsubin.png)
 
@@ -35,8 +35,7 @@ sudo g++ main.cpp Image.cpp -o app
 
 - Logic XOR: `./app images/lena.pgm xor images/aya.pgm`<br/>
 
-![alt-lena](ImageProcessing/fig/lena.png) ![alt-aya](ImageProcessing/fig/aya.png)<br/>
- ![alt-lena-xor-aya](ImageProcessing/fig/lenaXORaya.png)
+![alt-lena](ImageProcessing/fig/lena.png) ![alt-aya](ImageProcessing/fig/aya.png) ![alt-lena-xor-aya](ImageProcessing/fig/lenaXORaya.png)
 
 
 
@@ -54,6 +53,10 @@ sudo g++ main.cpp Image.cpp -o app
 ## Documentation
 - A full list of all the implemented algorithms can be found in page 2 of [documentation](image-processing-doc.pdf).
 - Enter each operation in camel case when testing, just like in the examples above.
+
+## Some useful linux commands for images
+- Resize an image: `convert img.png -resize 300x300\> output.png` (Target size in this example is 300x300).
+- Identify image resolution (width x height): `identify -format "%wx%h" image.png` (Install imagemagick linux package).
 
 ## Authors
 
