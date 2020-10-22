@@ -63,11 +63,10 @@ sudo g++ main.cpp Image.cpp -o app
 * **Peterson Yuhala** 
 * petersonyuhala@gmail.com
 * Feel free to contact me for more info or to propose fixes.
-* P.S: I am not an image processing expert; this was simply a class project :-)
-
+* Disclaimer: I am not an image processing expert and this code is meant solely for educational purposes. 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 
