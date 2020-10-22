@@ -41,8 +41,14 @@ sudo g++ main.cpp Image.cpp -o app
 
 
 ### Convolution and Filters (9)
-- Gauss Filter: `./app gaussFilter images/aya.pgm`
-- Laplacien Convolution: `./app laplacienConvo images/lena.pgm`
+- Gauss Filter: `./app gaussFilter images/aya.pgm`<br/>
+
+![alt-lena](ImageProcessing/fig/aya.png) ![alt-not-lena](ImageProcessing/fig/ayaGauss.png)
+
+
+- Laplacien Convolution: `./app laplacienConvo images/lena.pgm`<br/>
+
+![alt-lena](ImageProcessing/fig/lena.png) ![alt-not-lena](ImageProcessing/fig/laplacienConvoLena.png)
 
 
 ## Documentation
