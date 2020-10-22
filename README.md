@@ -1,47 +1,55 @@
 # Image-Processing-cpp
-This project presents a non exhaustive list of image processing algorithms. All algorithms are implemented in c++ and all images used are in pgm format.
-
-## Documentation
-
-All instructions required for testing the different algorithms can be found in the documentation provided. See [documentation](image-processing-doc.pdf) for more information on the project.
+- This project presents a non exhaustive list of image processing algorithms. The algorithms are implemented in C and C++ and all images used are in pgm format.
 
 ## Prerequisites
 
-To follow this tutorial you will need a linux machine with the gcc compiler driver. 
-
-## How to use the program
-The program presents 26 image processing algorithms. Lets suppose we want to binarize the image _lena.pgm_ in the folder _ImageProcessing/images_
-
-### Modifying the code
-Using a text editor or an IDE, open the main.cpp file. In the main function, uncomment
-the line corresponding to image binarization (otsuBinarize). 
-
-```
-Image imageIn = readImage("images/lena.pgm");
-Image imageOut=imageIn.otsuBinarize();
-
-```
-Leave the other algorithm implementations commented, so as not to produce the
-wrong imageOut object. Save the changes to the main.cpp file.
+- To follow this tutorial, you need to install the g++ compiler on your PC.
+- All examples here are based on a Linux environment but can be easily adapted for Windows based environments.
 
 ### Compiling the code
-If you are using the linux command line, open a linux terminal in the folder : ImageProcessing
-and type the following command to compile and run the program :
+- Clone this repo into your environment and `cd` into the `ImageProcessing` folder:
+```
+git clone https://github.com/Yuhala/image-processing-cpp.git && cd ImageProcessing
 
 ```
-sudo g++ main.cpp Image.cpp -o app && ./app
+Compile the program:
 
 ```
-If the above command runs without any errors (ignore the warnings), then the image
-has been binarized and written to the file :
-_ImageProcessing/output.pgm_
+sudo g++ main.cpp Image.cpp -o app
 
-You can open this output file to view the output and make sure its coherent.
+```
+## How to use the program
+- The program presents 26 image processing algorithms. Logic operations, mathematical operations, convolutions and filters, and calculating an image histogram, image luminance, and contrast enhancement algorithms.
+- The program can take 3, 4, or 5 arguments, including the name of the binary (`arg 0`). 
+- The sample images used are in the `images` folder and are all `.pgm` format.
+- The image resulting from each operation is generated in the `output.pgm`
+- Below is a list of some of the operations provided by the program and how you can test them on images. 
+### Logic Operations (6)
+- Image binarization based on Otso's thresholding algorithm: `./app otsuBinarize images/lena.pgm`
+![alt-lena](fig/lena.pgm) ![alt-lena-otsu](fig/otsubin.pgm)
+- Logic NOT: `./app not images/lena.pgm`
+![alt-lena](fig/lena.pgm) ![alt-not-lena](fig/notlena.pgm)
+- Logic XOR: `./app images/lena.pgm xor images/aya.pgm`
+![alt-lena](fig/lena.pgm) ![alt-aya](fig/aya.pgm) ![alt-lena-xor-aya](fig/lenaXORaya.pgm)
 
+
+
+
+### Convolution and Filters (9)
+- Gauss Filter: `./app gaussFilter images/aya.pgm`
+- Laplacien Convolution: `./app laplacienConvo images/lena.pgm`
+
+
+## Documentation
+- A full list of all the implemented algorithms can be found in page 2 of [documentation](image-processing-doc.pdf).
+- Enter each operation in camel case when testing, just like in the examples above.
 
 ## Authors
 
 * **Peterson Yuhala** 
+* petersonyuhala@gmail.com
+* Feel free to contact me for more info or to propose fixes.
+* P.S: I am not an image processing expert; this was simply a class project :-)
 
 
 ## License
