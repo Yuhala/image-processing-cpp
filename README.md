@@ -25,14 +25,15 @@ sudo g++ main.cpp Image.cpp -o app
 - The image resulting from each operation is generated in the `output.pgm`
 - Below is a list of some of the operations provided by the program and how you can test them on images. 
 ### Logic Operations (6)
-- Image binarization based on Otso's thresholding algorithm: `./app otsuBinarize images/lena.pgm`
-![alt-lena](ImageProcessing/fig/lena.png) ![alt-lena-otsu](ImageProcessing/fig/otsubin.png)<br/>
+- Image binarization based on Otso's thresholding algorithm: `./app otsuBinarize images/lena.pgm`<br/>
+![alt-lena](ImageProcessing/fig/lena.png) ![alt-lena-otsu](ImageProcessing/fig/otsubin.png)
 
-- Logic NOT: `./app not images/lena.pgm`
-![alt-lena](ImageProcessing/fig/lena.png) ![alt-not-lena](ImageProcessing/fig/notlena.png)<br/>
+- Logic NOT: `./app not images/lena.pgm`<br/>
+![alt-lena](ImageProcessing/fig/lena.png) ![alt-not-lena](ImageProcessing/fig/notlena.png)
 
-- Logic XOR: `./app images/lena.pgm xor images/aya.pgm`
-![alt-lena](ImageProcessing/fig/lena.png) ![alt-aya](ImageProcessing/fig/aya.png) ![alt-lena-xor-aya](ImageProcessing/fig/lenaXORaya.png)<br/>
+- Logic XOR: `./app images/lena.pgm xor images/aya.pgm`<br/>
+![alt-lena](ImageProcessing/fig/lena.png) ![alt-aya](ImageProcessing/fig/aya.png)<br/>
+ ![alt-lena-xor-aya](ImageProcessing/fig/lenaXORaya.png)
 
 
 
