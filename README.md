@@ -54,6 +54,8 @@ sudo g++ main.cpp Image.cpp -o app
 - A full list of all the implemented algorithms can be found in page 2 of [documentation](image-processing-doc.pdf).
 - Enter each operation in camel case when testing, just like in the examples above.
 - [Digital image processing 4th Edition, by Rafael C. Gonzalez](https://dl.icdst.org/pdfs/files4/01c56e081202b62bd7d3b4f8545775fb.pdf)
+- [Digital image processing in C++](https://github.com/tonyfu97/Digital-Image-Processing)
+- [Repository](https://github.com/tonyfu97/Digital-Image-Processing)
 
 ## Some useful linux commands for images
 - Resize an image: `convert img.png -resize 300x300\> output.png` (Target size in this example is 300x300).
