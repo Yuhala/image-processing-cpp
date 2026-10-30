@@ -1,8 +1,5 @@
 /*
- * Created on Thu Oct 22 2020
- *
- * Copyright (c) 2020 Peterson Yuhala, IIUN
- * Refactoring project
+Function.hpp
  */
 
 #include <iostream>
@@ -435,7 +432,7 @@ Image smoothingFilter(Image &im)
 
 void printHistogram(Image &im)
 {
-    int histogram[im.gray + 1] = {0};
+    std::vector<int>histogram(im.gray + 1,0);
     int sum = 0;
     //Calculate image histogram
     for (int i = 0; i < im.rows; i++)
@@ -535,9 +532,9 @@ Image histogramEquilization(Image &im)
     Image newImage = Image(im.rows, im.cols, im.gray);
     int pixel = 0, val = 0;
     //On utilise les doubles ici pour eviter la perte de l'information pendant la division!
-    double histogram[im.gray + 1] = {0};
-    double hn[im.gray + 1] = {0};
-    double ci[im.gray + 1] = {0};
+    std::vector<double> histogram(im.gray + 1, 0);
+    std::vector<double> hn(im.gray + 1, 0.0);
+    std::vector<double> ci(im.gray + 1, 0.0);
     double nbp = im.cols * im.rows;
     int sum = 0;
     //Calculate image histogram
@@ -601,7 +598,7 @@ Image sharpen(Image &im)
 
 Image scalingNN(Image &im, double scale)
 {
-    int pixels[im.cols * im.rows] = {0};
+    std::vector<int> pixels(im.cols * im.rows, 0);
     //Put image pixels in 1D array
     for (int i = 0; i < im.rows; i++)
     {
@@ -614,7 +611,7 @@ Image scalingNN(Image &im, double scale)
     int destW = (int)im.cols * scale;
     int destH = (int)im.rows * scale;
 
-    int temp[destH * destW] = {0};
+    std::vector<int> temp(destH * destW, 0);
     int px = 0, py = 0, pixel = 0;
     Image newImage = Image(destH, destW, im.gray);
     for (int i = 0; i < destH; i++)

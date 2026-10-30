@@ -262,5 +262,5 @@ void printHelp()
            "- To MULT an image by 2: ./app mult 2 images/lena.pgm \n"
            "- See README for more info on other operations\n"
            "---------------------------------------------\n"
-           "- Contact me: petersonyuhala@gmail.com\n");
+           "from ImageProcessing file\n");
 }

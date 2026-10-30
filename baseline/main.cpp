@@ -25,6 +25,10 @@ void printHelp();
 
 int main(int argc, char **argv)
 {
+    //testing
+    printf("argc=%d\n", argc);
+    for (int i = 0; i < argc; i++) printf("argv[%d]=[%s]\n", i, argv[i]);
+
     int M = 0, N = 0, Q = 0; // rows, cols, grayscale
     int val;
     bool type;
@@ -81,7 +85,7 @@ Image runOp3(char **argv)
         Image imageIn = readImage(argv[2]);
         return imageIn.otsuBinarize();
     }
-    else if (strcmp(argv[1], "linearContrast") == 0)
+     else if (strcmp(argv[1], "linearContrast") == 0)
     {
         printf("Applying linear contrast operation on image\n");
         Image imageIn = readImage(argv[2]);
@@ -261,6 +265,6 @@ void printHelp()
            "- To ADD two images: ./app images/lena.pgm add images/aya.pgm\n"
            "- To MULT an image by 2: ./app mult 2 images/lena.pgm \n"
            "- See README for more info on other operations\n"
-           "---------------------------------------------\n"
-           "- Contact me: petersonyuhala@gmail.com\n");
+           " Note: from baseline file.\n"
+           "---------------------------------------------\n");  
 }

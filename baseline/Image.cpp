@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /* 
  * File:   Functions.h
  * Author: Peterson Yuhala
  * Subject: Image Processing
- * School: ENSP Yaounde
- *
- * Created on November 12, 2017, 3:15 PM
+
  */
 #include <stdlib.h>
 #include <iostream>
@@ -119,7 +111,7 @@ Image Image::logicNOT() {
 }
 
 Image Image::otsuBinarize() {
-    double histogram[gray + 1] = {0};
+    std::vector<double> histogram(gray + 1, 0.0);
     int sum = 0;
     //Calculate image histogram
     for (int i = 0; i < rows; i++) {
@@ -144,8 +136,9 @@ Image Image::otsuBinarize() {
     }
     //Begin Otsu's algorithmImage newImage =this->threshold(100);
 
-    double probability[gray + 1], mean[gray + 1];
-    double max_between, between[gray + 1];
+    std::vector<double> probability(gray + 1), mean(gray + 1);
+    double max_between;
+    std::vector<double> between(gray + 1);
     int threshold;
 
     /*

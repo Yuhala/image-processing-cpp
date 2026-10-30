@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   Functions.h
  * Author: Peterson Yuhala
- * Subject: Image Processing
- * School: ENSP Yaounde
  *
  * Created on November 12, 2017, 3:15 PM
  */
