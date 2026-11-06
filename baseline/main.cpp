@@ -1,21 +1,12 @@
 
 /* 
  * File:   main.cpp
- * Author: Peterson Yuhala Jr.
- * Subject: Image Processing
- * School: ENSP Yaounde
- * email: petersonyuhala@gmail.com
- *
- * Created on November 12, 2017, 3:15 PM
- * This projects represents my image processing class project and contains code written by me, 
- * code copied from the internet, and code copied from friends.
- * Feel free to use the code for any reason.
- *
- * 
  */
 
 #include "Functions.hpp"
 #include <string.h>
+#include <omp.h>
+#include <cstdio>
 
 Image runOperation(int argc, char **argv);
 Image runOp3(char **argv);
@@ -68,6 +59,7 @@ Image runOperation(int argc, char **argv)
 
     default:
         printHelp();
+        return Image();
     }
 }
 
