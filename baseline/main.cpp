@@ -5,7 +5,6 @@
 
 #include "Functions.hpp"
 #include <string.h>
-#include <omp.h>
 #include <cstdio>
 
 Image runOperation(int argc, char **argv);
