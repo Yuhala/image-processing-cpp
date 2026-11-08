@@ -20,6 +20,7 @@ events:
     names:
       - "uname"
     candidate_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -38,9 +39,11 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/uname"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/uname"
       - "/opt/homebrew/bin/uname"
       - "/opt/homebrew/sbin/uname"
@@ -51,6 +54,7 @@ events:
     found: "/usr/bin/uname"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -74,6 +78,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -104,6 +109,7 @@ events:
       - "make"
       - "smake"
     candidate_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -122,9 +128,11 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/gmake"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/gmake"
       - "/opt/homebrew/bin/gmake"
       - "/opt/homebrew/sbin/gmake"
@@ -143,8 +151,10 @@ events:
       - "/Library/Apple/usr/bin/gmake"
       - "/usr/local/share/dotnet/gmake"
       - "/Users/hannahalukka/.dotnet/tools/gmake"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/gmake"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/gmake"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/gmake"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/make"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/make"
       - "/opt/homebrew/bin/make"
       - "/opt/homebrew/sbin/make"
@@ -155,6 +165,7 @@ events:
     found: "/usr/bin/make"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -178,6 +189,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -206,6 +218,7 @@ events:
       - "icx"
       - "clang++"
     candidate_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -224,9 +237,11 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/c++"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/c++"
       - "/opt/homebrew/bin/c++"
       - "/opt/homebrew/sbin/c++"
@@ -237,6 +252,7 @@ events:
     found: "/usr/bin/c++"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -260,6 +276,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -289,6 +306,7 @@ events:
     found: "/opt/homebrew/share/cmake/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -312,6 +330,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -398,6 +417,7 @@ events:
       - "ar"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -415,11 +435,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/ar"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -443,6 +465,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -466,6 +489,7 @@ events:
       - "ranlib"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -483,11 +507,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/ranlib"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -511,6 +537,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -534,6 +561,7 @@ events:
       - "strip"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -551,11 +579,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/strip"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -579,6 +609,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -602,6 +633,7 @@ events:
       - "ld"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -619,11 +651,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/ld"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -647,6 +681,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -670,6 +705,7 @@ events:
       - "nm"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -687,11 +723,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/nm"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -715,6 +753,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -738,6 +777,7 @@ events:
       - "objdump"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -755,11 +795,13 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     found: "/usr/bin/objdump"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -783,6 +825,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -806,6 +849,7 @@ events:
       - "objcopy"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -823,10 +867,12 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/objcopy"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/objcopy"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/objcopy"
       - "/opt/homebrew/bin/objcopy"
       - "/opt/homebrew/sbin/objcopy"
@@ -844,11 +890,13 @@ events:
       - "/Library/Apple/usr/bin/objcopy"
       - "/usr/local/share/dotnet/objcopy"
       - "/Users/hannahalukka/.dotnet/tools/objcopy"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/objcopy"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/objcopy"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/objcopy"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -872,6 +920,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -895,6 +944,7 @@ events:
       - "readelf"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -912,10 +962,12 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/readelf"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/readelf"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/readelf"
       - "/opt/homebrew/bin/readelf"
       - "/opt/homebrew/sbin/readelf"
@@ -933,11 +985,13 @@ events:
       - "/Library/Apple/usr/bin/readelf"
       - "/usr/local/share/dotnet/readelf"
       - "/Users/hannahalukka/.dotnet/tools/readelf"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/readelf"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/readelf"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/readelf"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -961,6 +1015,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -984,6 +1039,7 @@ events:
       - "dlltool"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1001,10 +1057,12 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/dlltool"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/dlltool"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/dlltool"
       - "/opt/homebrew/bin/dlltool"
       - "/opt/homebrew/sbin/dlltool"
@@ -1022,11 +1080,13 @@ events:
       - "/Library/Apple/usr/bin/dlltool"
       - "/usr/local/share/dotnet/dlltool"
       - "/Users/hannahalukka/.dotnet/tools/dlltool"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/dlltool"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/dlltool"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/dlltool"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1050,6 +1110,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -1073,6 +1134,7 @@ events:
       - "addr2line"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1090,10 +1152,12 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/addr2line"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/addr2line"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/addr2line"
       - "/opt/homebrew/bin/addr2line"
       - "/opt/homebrew/sbin/addr2line"
@@ -1111,11 +1175,13 @@ events:
       - "/Library/Apple/usr/bin/addr2line"
       - "/usr/local/share/dotnet/addr2line"
       - "/Users/hannahalukka/.dotnet/tools/addr2line"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/addr2line"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/addr2line"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/addr2line"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1139,6 +1205,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -1162,6 +1229,7 @@ events:
       - "tapi"
     candidate_directories:
       - "/usr/bin/"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1179,10 +1247,12 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
       - "/usr/bin/tapi"
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/tapi"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/tapi"
       - "/opt/homebrew/bin/tapi"
       - "/opt/homebrew/sbin/tapi"
@@ -1200,11 +1270,13 @@ events:
       - "/Library/Apple/usr/bin/tapi"
       - "/usr/local/share/dotnet/tapi"
       - "/Users/hannahalukka/.dotnet/tools/tapi"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/tapi"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/tapi"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/tapi"
     found: false
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1228,6 +1300,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
   -
@@ -1250,6 +1323,7 @@ events:
     names:
       - "install_name_tool"
     candidate_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/"
       - "/opt/homebrew/bin/"
       - "/opt/homebrew/sbin/"
@@ -1268,9 +1342,11 @@ events:
       - "/Library/Apple/usr/bin/"
       - "/usr/local/share/dotnet/"
       - "/Users/hannahalukka/.dotnet/tools/"
+      - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts/"
       - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand/"
       - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim/"
     searched_directories:
+      - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin/install_name_tool"
       - "/Library/Frameworks/Python.framework/Versions/3.14/bin/install_name_tool"
       - "/opt/homebrew/bin/install_name_tool"
       - "/opt/homebrew/sbin/install_name_tool"
@@ -1281,6 +1357,7 @@ events:
     found: "/usr/bin/install_name_tool"
     search_context:
       ENV{PATH}:
+        - "/Users/hannahalukka/CAB401-image-processing-cpp/.venv/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.14/bin"
         - "/opt/homebrew/bin"
         - "/opt/homebrew/sbin"
@@ -1304,6 +1381,7 @@ events:
         - "/opt/homebrew/sbin"
         - "/Library/Frameworks/Python.framework/Versions/3.12/bin"
         - "/Library/Frameworks/Python.framework/Versions/3.10/bin"
+        - "/Users/hannahalukka/.vscode/extensions/ms-python.debugpy-2026.6.0-darwin-arm64/bundled/scripts/noConfigScripts"
         - "/Users/hannahalukka/Library/Application Support/Code/User/globalStorage/github.copilot-chat/debugCommand"
         - "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/copilot-shim"
       CMAKE_INSTALL_PREFIX: "/usr/local"
@@ -1316,8 +1394,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v"
-      binary: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v"
+      source: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh"
+      binary: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -1331,19 +1409,19 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: false
       stdout: |
-        Change Dir: '/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v'
+        Change Dir: '/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh'
         
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ab79e/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ab79e.dir/build.make CMakeFiles/cmTC_ab79e.dir/build
-        Building CXX object CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78c2d/fast
+        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_78c2d.dir/build.make CMakeFiles/cmTC_78c2d.dir/build
+        Building CXX object CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch arm64   -v -Wl,-v -MD -MT CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 21.0.0 (clang-2100.4.1.1)
         Target: arm64-apple-darwin25.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=27.2 -fdepfile-entry=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v -target-linker-version 27033.1 -v -fcoverage-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=27.2 -fdepfile-entry=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh -target-linker-version 27033.1 -v -fcoverage-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 21.0.0 (clang-2100.4.1.1) default target arm64-apple-darwin25.6.0
         ignoring nonexistent directory "/usr/local/include"
         ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
@@ -1357,13 +1435,13 @@ events:
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
          /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)
         End of search list.
-        Linking CXX executable cmTC_ab79e
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab79e.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_78c2d
+        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78c2d.dir/link.txt --verbose=1
         Apple clang version 21.0.0 (clang-2100.4.1.1)
         Target: arm64-apple-darwin25.6.0
         Thread model: posix
         InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ab79e -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a
+         "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_78c2d -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-27106.1
         BUILD 19:06:34 Oct 19 2026
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
@@ -1375,7 +1453,7 @@ events:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_ab79e
+        /usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_78c2d
         
       exitCode: 0
   -
@@ -1419,19 +1497,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v']
+        ignore line: [Change Dir: '/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ab79e/fast]
-        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_ab79e.dir/build.make CMakeFiles/cmTC_ab79e.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_78c2d/fast]
+        ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_78c2d.dir/build.make CMakeFiles/cmTC_78c2d.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch arm64   -v -Wl -v -MD -MT CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -c /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 21.0.0 (clang-2100.4.1.1)]
         ignore line: [Target: arm64-apple-darwin25.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=27.2 -fdepfile-entry=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v -target-linker-version 27033.1 -v -fcoverage-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-4HGY0v -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx26.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -fno-sized-deallocation -target-sdk-version=27.2 -fdepfile-entry=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/SDKSettings.json -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -fdefine-target-os-macros -fno-assume-unique-vtables -fno-modulemap-allow-subdirectory-search -enable-tlsdesc -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +altnzcv -target-feature +ccdp -target-feature +ccpp -target-feature +complxnum -target-feature +crc -target-feature +dotprod -target-feature +flagm -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +fptoint -target-feature +fullfp16 -target-feature +jsconv -target-feature +lse -target-feature +neon -target-feature +pauth -target-feature +perfmon -target-feature +predres -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sb -target-feature +sha2 -target-feature +sha3 -target-feature +specrestrict -target-feature +ssbs -target-abi darwinpcs -debugger-tuning=lldb -fdebug-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh -target-linker-version 27033.1 -v -fcoverage-compilation-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-B3WJjh -resource-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21 -dependency-file CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks -internal-iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks -Wno-elaborated-enum-base -fdeprecated-macro -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fskip-odr-check-in-gmf -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -Wno-error=allocator-wrappers -fdwarf2-cfi-asm -o CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -x c++ /opt/homebrew/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 21.0.0 (clang-2100.4.1.1) default target arm64-apple-darwin25.6.0]
         ignore line: [ignoring nonexistent directory "/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
@@ -1445,14 +1523,14 @@ events:
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/SubFrameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [Linking CXX executable cmTC_ab79e]
-        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ab79e.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_78c2d]
+        ignore line: [/opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78c2d.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 21.0.0 (clang-2100.4.1.1)]
         ignore line: [Target: arm64-apple-darwin25.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ab79e -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> linker [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld]
-        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_ab79e -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_78c2d -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> linker [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld]
+        link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch arm64 -platform_version macos 26.0.0 27.2 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_78c2d -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1469,12 +1547,12 @@ events:
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_ab79e] ==> ignore
+          arg [cmTC_78c2d] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_ab79e.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
+          arg [CMakeFiles/cmTC_78c2d.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/21/lib/darwin/libclang_rt.osx.a]
@@ -1508,37 +1586,4 @@ events:
       configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em armv8m.main armv8.1m.main
       LTO support using: LLVM version 21.0.0 (static support for 30, runtime is 30)
       TAPI support using: Apple TAPI version 21.0.0 (tapi-2100.3.8.1)
-  -
-    kind: "try_compile-v1"
-    backtrace:
-      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:576 (try_compile)"
-      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:716 (_OPENMP_GET_SPEC_DATE)"
-      - "CMakeLists.txt:31 (find_package)"
-    description: "Detecting CXX OpenMP version"
-    directories:
-      source: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-OHcgzF"
-      binary: "/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-OHcgzF"
-    cmakeVariables:
-      CMAKE_CXX_FLAGS: ""
-      CMAKE_CXX_FLAGS_DEBUG: "-g"
-      CMAKE_CXX_STDLIB_MODULES_JSON: ""
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: ""
-      CMAKE_OSX_DEPLOYMENT_TARGET: ""
-      CMAKE_OSX_SYSROOT: ""
-    buildResult:
-      variable: "OpenMP_SPECTEST_CXX_"
-      cached: true
-      stdout: |
-        Change Dir: '/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-OHcgzF'
-        
-        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6fbee/fast
-        /Applications/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_6fbee.dir/build.make CMakeFiles/cmTC_6fbee.dir/build
-        Building CXX object CMakeFiles/cmTC_6fbee.dir/OpenMPCheckVersion.cpp.o
-        /usr/bin/c++  -I/opt/homebrew/opt/libomp/include -Xpreprocessor -fopenmp -std=gnu++17 -arch arm64 -MD -MT CMakeFiles/cmTC_6fbee.dir/OpenMPCheckVersion.cpp.o -MF CMakeFiles/cmTC_6fbee.dir/OpenMPCheckVersion.cpp.o.d -o CMakeFiles/cmTC_6fbee.dir/OpenMPCheckVersion.cpp.o -c /Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles/CMakeScratch/TryCompile-OHcgzF/OpenMPCheckVersion.cpp
-        Linking CXX executable cmTC_6fbee
-        /opt/homebrew/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6fbee.dir/link.txt --verbose=1
-        /usr/bin/c++  -Xpreprocessor -fopenmp -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_6fbee.dir/OpenMPCheckVersion.cpp.o -o cmTC_6fbee
-        
-      exitCode: 0
 ...

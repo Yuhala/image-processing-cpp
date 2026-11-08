@@ -1683,8 +1683,7 @@ CMakeFiles/baseline.dir/main.cpp.o: /Users/hannahalukka/CAB401-image-processing-
   /Users/hannahalukka/CAB401-image-processing-cpp/baseline/Functions.h \
   /Users/hannahalukka/CAB401-image-processing-cpp/baseline/Functions.hpp \
   /Users/hannahalukka/CAB401-image-processing-cpp/baseline/Image.h \
-  /Users/hannahalukka/CAB401-image-processing-cpp/baseline/timing.h \
-  /opt/homebrew/opt/libomp/include/omp.h
+  /Users/hannahalukka/CAB401-image-processing-cpp/baseline/timing.h
 
 
 /Users/hannahalukka/CAB401-image-processing-cpp/baseline/timing.h:
@@ -1860,8 +1859,6 @@ CMakeFiles/baseline.dir/main.cpp.o: /Users/hannahalukka/CAB401-image-processing-
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_endian.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/stdlib.h:
-
-/opt/homebrew/opt/libomp/include/omp.h:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/lower_bound.h:
 

@@ -9,3 +9,4 @@ results/*.tmp
 build/
 run.log
 timings.txt
+omp_check.cpp

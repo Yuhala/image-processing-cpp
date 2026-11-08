@@ -852,5 +852,4 @@ CMakeFiles/baseline.dir/main.cpp.o: \
   /Users/hannahalukka/CAB401-image-processing-cpp/baseline/timing.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/chrono \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1/forward_list \
-  /opt/homebrew/opt/libomp/include/omp.h \
   /Users/hannahalukka/CAB401-image-processing-cpp/baseline/Functions.h

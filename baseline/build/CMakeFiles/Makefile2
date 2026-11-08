@@ -63,11 +63,11 @@ CMAKE_BINARY_DIR = /Users/hannahalukka/CAB401-image-processing-cpp/baseline/buil
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all:
+all: CMakeFiles/baseline.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen:
+codegen: CMakeFiles/baseline.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,8 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean:
+clean: CMakeFiles/baseline.dir/clean
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/baseline.dir
+
+# All Build rule for target.
+CMakeFiles/baseline.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/baseline.dir/build.make CMakeFiles/baseline.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/baseline.dir/build.make CMakeFiles/baseline.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles --progress-num=1,2,3 "Built target baseline"
+.PHONY : CMakeFiles/baseline.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/baseline.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/baseline.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles 0
+.PHONY : CMakeFiles/baseline.dir/rule
+
+# Convenience name for target.
+baseline: CMakeFiles/baseline.dir/rule
+.PHONY : baseline
+
+# codegen rule for target.
+CMakeFiles/baseline.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/baseline.dir/build.make CMakeFiles/baseline.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles --progress-num=1,2,3 "Finished codegen for target baseline"
+.PHONY : CMakeFiles/baseline.dir/codegen
+
+# clean rule for target.
+CMakeFiles/baseline.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/baseline.dir/build.make CMakeFiles/baseline.dir/clean
+.PHONY : CMakeFiles/baseline.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

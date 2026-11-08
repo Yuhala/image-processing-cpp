@@ -111,7 +111,6 @@ baseline_EXTERNAL_OBJECTS =
 baseline: CMakeFiles/baseline.dir/main.cpp.o
 baseline: CMakeFiles/baseline.dir/Image.cpp.o
 baseline: CMakeFiles/baseline.dir/build.make
-baseline: /opt/homebrew/opt/libomp/lib/libomp.dylib
 baseline: CMakeFiles/baseline.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/hannahalukka/CAB401-image-processing-cpp/baseline/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable baseline"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/baseline.dir/link.txt --verbose=$(VERBOSE)
