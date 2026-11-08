@@ -16,8 +16,9 @@ void printHelp();
 int main(int argc, char **argv)
 {
     //testing
-    printf("argc=%d\n", argc);
-    for (int i = 0; i < argc; i++) printf("argv[%d]=[%s]\n", i, argv[i]);
+    //commented out due to causing issues with the verify.sh script
+    //printf("argc=%d\n", argc);
+    //for (int i = 0; i < argc; i++) printf("argv[%d]=[%s]\n", i, argv[i]);
 
     int M = 0, N = 0, Q = 0; // rows, cols, grayscale
     int val;

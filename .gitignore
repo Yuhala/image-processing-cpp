@@ -6,3 +6,6 @@ aya[0-9]*.pgm
 bella[0-9]*.pgm
 .DS_Store
 results/*.tmp
+build/
+run.log
+timings.txt

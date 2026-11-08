@@ -15,7 +15,7 @@ inline double now_ms()
 
 static double g_read_ms = 0.0; // time spent inside readImage
 
-// Prints one line to stderr only when IMG_TIMING is set.
+// Prints one line to stderr only when IMG_TIMING is set. 
 inline void report_timing(double t0, double t1, double t2)
 {
     if (!getenv("IMG_TIMING")) return;

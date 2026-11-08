@@ -76,6 +76,7 @@ Image readImage(char fname[])
 
     double read_t1 = now_ms();
     g_read_ms = read_t1 - read_t0;
+
     return image;
 }
 //Logic Operations on images
