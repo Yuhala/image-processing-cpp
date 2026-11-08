@@ -8,6 +8,7 @@ Function.hpp
 #include <stdlib.h>
 #include <cstdlib>
 #include "Image.h"
+#include "timing.h"
 using namespace std;
 
 /*
@@ -20,6 +21,7 @@ const int SIZE = 3;
 Image readImage(char fname[])
 {
     int i, j;
+    double read_t0 = now_ms();
     int N = 0, M = 0, Q = 0;
     unsigned char *charImage;
     char header[100], *ptr;
@@ -71,6 +73,9 @@ Image readImage(char fname[])
     }
 
     ifs.close();
+
+    double read_t1 = now_ms();
+    g_read_ms = read_t1 - read_t0;
 
     return image;
 }

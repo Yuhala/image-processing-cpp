@@ -1,0 +1,1 @@
+TIMING threads=1 read_ms=322.369 compute_ms=0.008 write_ms=0.030 total_ms=322.406

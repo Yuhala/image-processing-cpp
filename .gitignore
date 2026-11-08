@@ -1,0 +1,7 @@
+.venv/
+app_*
+output.pgm
+*.trace
+aya4096.pgm
+.DS_Store
+results/*.tmp

@@ -1,0 +1,10 @@
+argc=3
+argv[0]=[./app_baseline]
+argv[1]=[gaussFilter]
+argv[2]=[aya4096.pgm]
+Applying gauss filter on image
+Version : P2
+Comment : # CREATOR: GIMP PNM Filter Version 1.1
+0 columns and 0 rows
+0
+TIMING threads=1 read_ms=322.369 compute_ms=0.008 write_ms=0.030 total_ms=322.406

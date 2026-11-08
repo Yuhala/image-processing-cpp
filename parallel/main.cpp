@@ -24,7 +24,9 @@ int main(int argc, char **argv)
     bool type;
     ofstream ofile("output.pgm", std::ios::out);
 
+    double t0 = now_ms();
     Image imageOut = runOperation(argc, argv);
+    double t1 = now_ms();
 
     //write to the output file
     ofile << "P2\n"
@@ -37,6 +39,8 @@ int main(int argc, char **argv)
         }
     }
 
+    double t2 = now_ms();
+    report_timing(t0, t1, t2);
     return 0;
 }
 
