@@ -2,6 +2,7 @@
 app_*
 output.pgm
 *.trace
-aya4096.pgm
+aya[0-9]*.pgm
+bella[0-9]*.pgm
 .DS_Store
 results/*.tmp
