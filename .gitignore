@@ -1,16 +1,39 @@
+# Python
 .venv/
+__pycache__/
+
+# Build output
+build/
+build-prof/
+dist/
+*.dSYM/
+app
 app_*
+/omp_check
+/omp_overhead
+
+# NetBeans project files (CMake is the build system)
+nbproject/
+.dep.inc
+
+# Program output and run logs
 output.pgm
 output.png
-*.trace
-aya[0-9]*.pgm
-bella[0-9]*.pgm
-.DS_Store
-results/*.tmp
-build/
 run.log
 timings.txt
-omp_check.cpp
-*.trace
-build-prof/
+leaks_*.txt
+results/*.tmp
 baseline_profile_test.csv
+
+# Profiler traces (Instruments)
+*.trace
+
+# Generated benchmark images (scripts/make_large_images.py)
+largerImages/
+
+# Reference textbook - copyrighted, not redistributed
+docs/
+
+# Editor / OS
+.vscode/
+.DS_Store

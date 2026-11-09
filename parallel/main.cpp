@@ -38,6 +38,12 @@ int main(int argc, char **argv)
     int M = 0, N = 0, Q = 0; // rows, cols, grayscale
     int val;
     bool type;
+    if (argc < 3 || argc > 5)        // nothing to do: don't create output.pgm
+    {
+        printHelp();
+        return 1;
+    }
+
     ofstream ofile("output.pgm", std::ios::out);
 
     double t0 = now_ms();
@@ -294,12 +300,20 @@ Image runOp5(char **argv)
 }
 void printHelp()
 {
-    printf("--------------------Help---------------------\n"
-           "- You must enter 3, 4, or 5 arguments (including the program name)\n"
-           "- E.g. To apply NOT operation on an image: ./app not images/lena.pgm\n"
-           "- To ADD two images: ./app images/lena.pgm add images/aya.pgm\n"
-           "- To MULT an image by 2: ./app mult 2 images/lena.pgm \n"
-           "- See README for more info on other operations\n"
-           " Note: from bestseq file.\n"
-           "---------------------------------------------\n");  
+    printf("Usage: ./app <operation> <image.pgm>             (one image)\n"
+           "       ./app <image1.pgm> <operation> <image2.pgm> (two images, same size)\n"
+           "       ./app mult <factor> <image.pgm>\n"
+           "       ./app linearContrastSaturation <image.pgm> <smin> <smax>\n"
+           "\n"
+           "One-image operations:\n"
+           "  not otsuBinarize linearContrast histogramEquilization\n"
+           "  sobelFilter prewittFilter gaussFilter smoothingFilter robertFilter\n"
+           "  laplacienConvo sharpen edgeDetect mirror erosion\n"
+           "  printHistogram luminance calculateContrast   (print a result only)\n"
+           "Two-image operations:\n"
+           "  and nand or xor add sub\n"
+           "\n"
+           "The result is written to output.pgm in the current directory.\n"
+           "Set OMP_NUM_THREADS to choose the thread count, IMG_TIMING=1 for timings.\n"
+           "Example: ./app gaussFilter images/lena.pgm\n");
 }
