@@ -10,6 +10,10 @@ Function.hpp
 #include "Image.h"
 #include "timing.h"
 #include <cstring>
+#include <algorithm>
+#ifdef _OPENMP
+#include <omp.h>
+#endif
 using namespace std;
 
 /*
