@@ -56,7 +56,7 @@ Image readImage(char fname[])
     ss.ignore();
     cout << Q << endl;
 
-    Image image(N, M, Q);
+    Image image(N, M, Q, false);
 
     // Read and record the pixel values into the image object
 
@@ -92,7 +92,7 @@ Image logicAND(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -117,7 +117,7 @@ Image logicNAND(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -142,7 +142,7 @@ Image logicOR(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -167,7 +167,7 @@ Image logicXOR(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -192,7 +192,7 @@ Image addition(Image &im1, Image &im2)
     }
     int Max = im1.gray;
     int pixel = 0, val = 0;
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -215,7 +215,7 @@ Image subtraction(Image &im1, Image &im2)
     }
     int Max = im1.gray;
     int pixel = 0, val = 0;
-    Image newImage = Image(im1.rows, im1.cols, im1.gray);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -235,7 +235,7 @@ Image multiplication(Image &im, double ratio)
     double pixel = 0;
     double val = 0;
     int Max = im.gray;
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
     for (int i = 0; i < im.rows; i++)
     {
         for (int j = 0; j < im.cols; j++)
@@ -269,7 +269,7 @@ Image multiplication(Image &im, double ratio)
  */
 Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
 
     // find center position of kernel (half of kernel size)
     int kCenter = kSize / 2;
@@ -316,7 +316,7 @@ Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
 
 Image convo2D(Image &im, double kernel[2][2], int kSize, int norm)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
 
     // find center position of kernel (half of kernel size)
     int kCenter = kSize / 2;
@@ -487,7 +487,7 @@ double luminance(Image &im)
 
 Image linearContrast(Image &im)
 { //Amelioration de contrast lineaire
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
     int mini = minPixel(im);
     int maxi = maxPixel(im), pixel = 0;
     int val = 0;
@@ -514,7 +514,7 @@ Image linearContrastSaturation(Image &im, double sMin, double sMax)
         cout << "Valeurs de saturation invalides" << endl;
         exit(1);
     }
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
     int val = 0, pixel = 0;
 
     for (int i = 0; i < im.rows; i++)
@@ -534,7 +534,7 @@ Image linearContrastSaturation(Image &im, double sMin, double sMax)
 
 Image histogramEquilization(Image &im)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
     int pixel = 0, val = 0;
     //On utilise les doubles ici pour eviter la perte de l'information pendant la division!
     std::vector<double> histogram(im.gray + 1, 0);
@@ -618,7 +618,7 @@ Image scalingNN(Image &im, double scale)
 
     std::vector<int> temp(destH * destW, 0);
     int px = 0, py = 0, pixel = 0;
-    Image newImage = Image(destH, destW, im.gray);
+    Image newImage = Image(destH, destW, im.gray, false);
     for (int i = 0; i < destH; i++)
     {
         for (int j = 0; j < destW; j++)
@@ -645,7 +645,7 @@ Image scalingNN(Image &im, double scale)
 Image mirror(Image &im)
 {
     //Calculates the mirror of the input image
-    Image newImage = Image(im.rows, im.cols, im.gray);
+    Image newImage = Image(im.rows, im.cols, im.gray, false);
     int pixel = 0;
 
     for (int i = 0; i < im.rows; i++)
