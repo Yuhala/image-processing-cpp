@@ -1,8 +1,9 @@
 #!/bin/bash
 # usage: bash scripts/check_and_time.sh results/<name>.csv
 CSV=$1
-BIN=./bestseq/build/bestseq
-cmake --build bestseq/build || exit 1
+BIN=${2:-./bestseq/build/bestseq}
+cmake --build "$(dirname "$BIN")" || exit 1
+echo "Testing: $BIN"
 
 mkdir -p results/ref
 for op in gaussFilter otsuBinarize sobelFilter; do
