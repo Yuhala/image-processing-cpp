@@ -17,18 +17,15 @@ Image::Image() {
     pixelVal = NULL;
 }
 
-Image::Image(int numRows, int numCols, int grayLevels) {
+Image::Image(int numRows, int numCols, int grayLevels, bool zeroFill) {
     rows = numRows;
     cols = numCols;
     gray = grayLevels;
 
-    pixelVal = new int*[rows];
-    for (int i = 0; i < rows; i++) {
-        pixelVal[i] = new int[cols];
-        for (int j = 0; j < cols; j++) {
-            pixelVal[i][j] = 0;
-        }
-
+    pixelVal = new int[rows * cols];
+    if (zeroFill) {
+        for (int k = 0; k < rows * cols; k++) 
+            pixelVal[k] = 0;
     }
 }
 
@@ -37,33 +34,35 @@ Image::Image(const Image& oldImage) {
     cols = oldImage.cols;
     gray = oldImage.gray;
 
-    pixelVal = new int* [rows];
-    for (int i = 0; i < rows; i++) {
-        pixelVal[i] = new int [cols];
-        for (int j = 0; j < cols; j++)
-            pixelVal[i][j] = oldImage.pixelVal[i][j];
+    pixelVal = new int[rows * cols];
+    for (int k = 0; k < rows * cols; k++) {
+        pixelVal[k] = oldImage.pixelVal[k];
     }
 }
 
 Image::~Image() {
-    rows = 0;
+    delete[] pixelVal;
+
+    // removed for 1D array implementation
+/*     rows = 0;
     cols = 0;
     gray = 0;
 
     for (int i = 0; i < rows; i++)
         delete pixelVal [rows];
 
-    delete pixelVal;
+    delete pixelVal; */
 }
 
-int Image::getPixelVal(int row, int col)
-/*returns the gray value of a specific pixel*/ {
-    return pixelVal[row][col];
+/* int Image::getPixelVal(int row, int col) const
+//returns the gray value of a specific pixel {
+    return pixelVal[row * cols + col];
 }
 
 void Image::setPixelVal(int row, int col, int value) {
-    pixelVal[row][col] = value;
-}
+    pixelVal[row * cols + col] = value;
+} 
+    */
 
 bool Image::inBounds(int row, int col)
 /*checks to see if a pixel is within the image, returns true or false*/ {
@@ -73,9 +72,9 @@ bool Image::inBounds(int row, int col)
     return true;
 }
 
-/* Image Image::threshold(int threshold) {
+Image Image::threshold(int threshold) {
     int pixel = 0, val = 0;
-    Image newImage(rows, cols, gray);
+    Image newImage(rows, cols, gray, false);
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             pixel = this->getPixelVal(i, j);
@@ -87,20 +86,6 @@ bool Image::inBounds(int row, int col)
 
     }
 
-    return newImage;
-} */
-
-//parallelised ver
-Image Image::threshold(int threshold) {
-    Image newImage(rows, cols, gray, false);
-    #pragma omp parallel for schedule(static)
-    for (int i = 0; i < rows; i++) {
-        for (int j = 0; j < cols; j++) {
-            int pixel = this->getPixelVal(i, j);     // declared inside: private to each thread
-            int val = pixel >= threshold ? gray : 0;
-            newImage.setPixelVal(i, j, val);
-        }
-    }
     return newImage;
 }
 
@@ -128,25 +113,13 @@ Image Image::otsuBinarize() {
     std::vector<double> histogram(gray + 1, 0.0);
     int sum = 0;
     //Calculate image histogram
-/*     for (int i = 0; i < rows; i++) {
+    for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             int pixel =getPixelVal(i, j);
             histogram[pixel]++;
 
         }
-    } */
-    #pragma omp parallel
-    {
-        std::vector<int> local(gray + 1, 0);          // this thread's own histogram
-        #pragma omp for schedule(static)
-        for (int i = 0; i < rows; i++)
-            for (int j = 0; j < cols; j++)
-                local[getPixelVal(i, j)]++;
-        #pragma omp critical                          // add into the shared one, one thread at a time
-        for (int k = 0; k < gray + 1; k++)
-            histogram[k] += local[k];
-    }   
-
+    }
     //Calculate pixel sum
     for (int i = 0; i < gray + 1; i++) {
 
