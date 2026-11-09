@@ -134,10 +134,54 @@ Image readImage(char fname[])
     cout << M << " columns and " << N << " rows" << endl;
     cout << Q << endl;
 
-    Image image(N, M, Q, false);
+    /* Image image(N, M, Q, false);
     for (int i = 0; i < N; i++)
         for (int j = 0; j < M; j++)
-            image.setPixelVal(i, j, (int)parseUInt(p, end));
+            image.setPixelVal(i, j, (int)parseUInt(p, end)); */
+
+    Image image(N, M, Q, false);
+    long total = (long)N * M;
+
+    // 1. Split the pixel text into one chunk per thread, at whitespace
+    int T = 1;
+#ifdef _OPENMP
+    T = omp_get_max_threads();
+#endif
+    if (end - p < 1000000) T = 1;                     // small files: not worth splitting
+    std::vector<const char *> start(T + 1);
+    start[0] = p;
+    start[T] = end;
+    for (int t = 1; t < T; t++) {
+        const char *q = p + (end - p) * t / T;
+        while (q < end && !(*q == ' ' || *q == '\n' || *q == '\r' || *q == '\t')) ++q;
+        start[t] = q < start[t - 1] ? start[t - 1] : q;
+    }
+
+    // 2. Count the numbers in each chunk, in parallel
+    std::vector<long> first(T + 1, 0);
+    #pragma omp parallel for schedule(static, 1)
+    for (int t = 0; t < T; t++) {
+        long c = 0;
+        bool inNum = false;
+        for (const char *q = start[t]; q < start[t + 1]; ++q) {
+            bool digit = (*q >= '0' && *q <= '9');
+            if (digit && !inNum) c++;
+            inNum = digit;
+        }
+        first[t + 1] = c;
+    }
+
+    // 3. Prefix sum: index of each chunk's first pixel (serial, T steps)
+    for (int t = 1; t <= T; t++) first[t] += first[t - 1];
+
+    // 4. Parse every chunk in parallel, straight into its pixels
+    #pragma omp parallel for schedule(static, 1)
+    for (int t = 0; t < T; t++) {
+        const char *q = start[t];
+        long kEnd = std::min(first[t + 1], total);
+        for (long k = first[t]; k < kEnd; k++)
+            image.pixelVal[k] = (int)parseUInt(q, start[t + 1]);
+    }
 
     g_read_ms = now_ms() - read_t0;
     return image;
