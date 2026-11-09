@@ -91,6 +91,7 @@ bool Image::inBounds(int row, int col)
 
 Image Image::threshold(int threshold) {
     Image newImage(rows, cols, gray, false);
+    // Parallelize thresholding operation using OpenMP
     #pragma omp parallel for schedule(static)
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
@@ -126,13 +127,27 @@ Image Image::otsuBinarize() {
     std::vector<double> histogram(gray + 1, 0.0);
     int sum = 0;
     //Calculate image histogram
-    for (int i = 0; i < rows; i++) {
+    /* for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             int pixel =getPixelVal(i, j);
             histogram[pixel]++;
 
         }
+    } */
+
+    // Parallelize histogram calculation using OpenMP
+        #pragma omp parallel
+    {
+        std::vector<int> local(gray + 1, 0);          // this thread's own histogram
+        #pragma omp for schedule(static)
+        for (int i = 0; i < rows; i++)
+            for (int j = 0; j < cols; j++)
+                local[getPixelVal(i, j)]++;
+        #pragma omp critical                          // merge into the shared histogram, one thread at a time
+        for (int k = 0; k < gray + 1; k++)
+            histogram[k] += local[k];
     }
+
     //Calculate pixel sum
     for (int i = 0; i < gray + 1; i++) {
 

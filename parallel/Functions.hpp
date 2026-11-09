@@ -409,6 +409,7 @@ Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
     int jStart = kCenter, jEnd = im.cols - kCenter;   // interior cols: [jStart, jEnd)
     int jRight = jEnd > jStart ? jEnd : jStart;       // where the right border starts
 
+    // parallelize calculation using OpenMP
     #pragma omp parallel for scheduling(static)
     for (int i = 0; i < im.rows; ++i)
     {
