@@ -12,6 +12,11 @@ Function.hpp
 #include <cstring>
 using namespace std;
 
+#include <algorithm>
+#ifdef _OPENMP
+#include <omp.h>
+#endif
+
 /*
  *The following constant specifies the size of the kernel/mask. This value should be modified 
  *each time the kernel size needs to be changed
@@ -405,6 +410,7 @@ Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
     int jStart = kCenter, jEnd = im.cols - kCenter;   // interior cols: [jStart, jEnd)
     int jRight = jEnd > jStart ? jEnd : jStart;       // where the right border starts
 
+    
     for (int i = 0; i < im.rows; ++i)
     {
         if (i < iStart || i >= iEnd) {                // top or bottom border row

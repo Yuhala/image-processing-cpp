@@ -72,7 +72,7 @@ bool Image::inBounds(int row, int col)
     return true;
 }
 
-Image Image::threshold(int threshold) {
+/* Image Image::threshold(int threshold) {
     int pixel = 0, val = 0;
     Image newImage(rows, cols, gray, false);
     for (int i = 0; i < rows; i++) {
@@ -86,6 +86,20 @@ Image Image::threshold(int threshold) {
 
     }
 
+    return newImage;
+} */
+
+//parallelised ver
+Image Image::threshold(int threshold) {
+    Image newImage(rows, cols, gray, false);
+    #pragma omp parallel for schedule(static)
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            int pixel = this->getPixelVal(i, j);     // declared inside: private to each thread
+            int val = pixel >= threshold ? gray : 0;
+            newImage.setPixelVal(i, j, val);
+        }
+    }
     return newImage;
 }
 

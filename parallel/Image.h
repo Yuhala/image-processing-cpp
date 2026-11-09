@@ -10,6 +10,7 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 #include <vector>
+#include <omp.h>
 
 class Image
 {
