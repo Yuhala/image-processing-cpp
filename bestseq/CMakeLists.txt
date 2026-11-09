@@ -9,4 +9,4 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE RelWithDebInfo)
 endif()
 
-add_executable(bestseq main.cpp Image.cpp Functions.cpp)
+add_executable(bestseq main.cpp Image.cpp)
