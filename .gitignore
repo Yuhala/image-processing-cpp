@@ -1,6 +1,7 @@
 .venv/
 app_*
 output.pgm
+output.png
 *.trace
 aya[0-9]*.pgm
 bella[0-9]*.pgm
@@ -10,3 +11,6 @@ build/
 run.log
 timings.txt
 omp_check.cpp
+*.trace
+build-prof/
+baseline_profile_test.csv
