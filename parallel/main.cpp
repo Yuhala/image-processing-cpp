@@ -53,7 +53,7 @@ int main(int argc, char **argv)
         }
     } */
 
-    std::string out;
+/*     std::string out;
     out.reserve((size_t)imageOut.rows * imageOut.cols * 4);   // up to "255\n" per pixel
     for (int i = 0; i < imageOut.rows; i++) {
         for (int j = 0; j < imageOut.cols; j++) {
@@ -62,6 +62,19 @@ int main(int argc, char **argv)
     }
 
     ofile.write(out.data(), out.size());
+*/
+    int R = imageOut.rows, C = imageOut.cols;
+    std::vector<std::string> rowText(R);
+    #pragma omp parallel for schedule(static)
+    for (int i = 0; i < R; i++) {                     // format rows in parallel
+        rowText[i].reserve((size_t)C * 4);
+        for (int j = 0; j < C; j++) {
+            appendInt(rowText[i], imageOut.getPixelVal(i, j));
+        }
+    }
+    for (int i = 0; i < R; i++) {               // write them in order (serial)
+        ofile.write(rowText[i].data(), rowText[i].size());
+    }
 
     double t2 = now_ms();
     report_timing(t0, t1, t2);
