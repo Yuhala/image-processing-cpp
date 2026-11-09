@@ -9,7 +9,6 @@ Function.hpp
 #include <cstdlib>
 #include "Image.h"
 #include "timing.h"
-#include <cstring>
 using namespace std;
 
 #include <algorithm>
@@ -24,7 +23,7 @@ using namespace std;
 const int SIZE = 3;
 #include "Functions.h"
 
-/* Image readImage(char fname[])
+Image readImage(char fname[])
 {
     int i, j;
     double read_t0 = now_ms();
@@ -62,7 +61,7 @@ const int SIZE = 3;
     ss.ignore();
     cout << Q << endl;
 
-    Image image(N, M, Q, false);
+    Image image(N, M, Q);
 
     // Read and record the pixel values into the image object
 
@@ -84,108 +83,7 @@ const int SIZE = 3;
     g_read_ms = read_t1 - read_t0;
 
     return image;
-} */
-
-static inline unsigned parseUInt(const char *&p, const char *end)
-{
-    while (p < end && (*p == ' ' || *p == '\n' || *p == '\r' || *p == '\t')) ++p;
-    unsigned v = 0;
-    while (p < end && *p >= '0' && *p <= '9') { v = v * 10 + (unsigned)(*p - '0'); ++p; }
-    return v;
 }
-
-Image readImage(char fname[])
-{
-    double read_t0 = now_ms();
-
-    ifstream ifs(fname, ios::in | ios::binary);
-    if (!ifs)
-    {
-        cout << "Can't read image:" << fname << endl;
-        exit(1);
-    }
-
-    // Read the whole file with one read
-    ifs.seekg(0, ios::end);
-    size_t size = (size_t)ifs.tellg();
-    ifs.seekg(0, ios::beg);
-    string buf(size, '\0');
-    ifs.read(&buf[0], size);
-    ifs.close();
-
-    const char *p = buf.data();
-    const char *end = p + buf.size();
-
-    // Line 1: version, line 2: comment (same assumptions as the original reader)
-    const char *eol = (const char *)memchr(p, '\n', end - p);
-    string version(p, eol ? eol : end);
-    p = eol ? eol + 1 : end;
-    if (version.compare("P5") != 0 && version.compare("P2") != 0)
-        cerr << "Version error" << endl;
-    cout << "Version : " << version << endl;
-
-    eol = (const char *)memchr(p, '\n', end - p);
-    string comment(p, eol ? eol : end);
-    p = eol ? eol + 1 : end;
-    cout << "Comment : " << comment << endl;
-
-    int M = (int)parseUInt(p, end);   // columns
-    int N = (int)parseUInt(p, end);   // rows
-    int Q = (int)parseUInt(p, end);   // max gray
-    cout << M << " columns and " << N << " rows" << endl;
-    cout << Q << endl;
-
-    Image image(N, M, Q, false);
-    /* for (int i = 0; i < N; i++)
-        for (int j = 0; j < M; j++)
-            image.setPixelVal(i, j, (int)parseUInt(p, end)); */
-    long total = (long)N * M;
-
-    // 1. Split the pixel text into one chunk per thread, at whitespace
-    int T = 1;
-#ifdef _OPENMP
-    T = omp_get_max_threads();
-#endif
-    if (end - p < 1000000) T = 1;                     // small files: not worth splitting
-    std::vector<const char *> start(T + 1);
-    start[0] = p;
-    start[T] = end;
-    for (int t = 1; t < T; t++) {
-        const char *q = p + (end - p) * t / T;
-        while (q < end && !(*q == ' ' || *q == '\n' || *q == '\r' || *q == '\t')) ++q;
-        start[t] = q < start[t - 1] ? start[t - 1] : q;
-    }
-
-    // 2. Count the numbers in each chunk, in parallel
-    std::vector<long> first(T + 1, 0);
-    #pragma omp parallel for schedule(static, 1)
-    for (int t = 0; t < T; t++) {
-        long c = 0;
-        bool inNum = false;
-        for (const char *q = start[t]; q < start[t + 1]; ++q) {
-            bool digit = (*q >= '0' && *q <= '9');
-            if (digit && !inNum) c++;
-            inNum = digit;
-        }
-        first[t + 1] = c;
-    }
-
-    // 3. Prefix sum: index of each chunk's first pixel (serial, T steps)
-    for (int t = 1; t <= T; t++) first[t] += first[t - 1];
-
-    // 4. Parse every chunk in parallel, straight into its pixels
-    #pragma omp parallel for schedule(static, 1)
-    for (int t = 0; t < T; t++) {
-        const char *q = start[t];
-        long kEnd = std::min(first[t + 1], total);
-        for (long k = first[t]; k < kEnd; k++)
-            image.pixelVal[k] = (int)parseUInt(q, start[t + 1]);
-    }
-
-    g_read_ms = now_ms() - read_t0;
-    return image;
-}
-
 //Logic Operations on images
 
 Image logicAND(Image &im1, Image &im2)
@@ -199,7 +97,7 @@ Image logicAND(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -224,7 +122,7 @@ Image logicNAND(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -249,7 +147,7 @@ Image logicOR(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -274,7 +172,7 @@ Image logicXOR(Image &im1, Image &im2)
     int pixel = 0, val = 0;
     Image newIm1 = im1.otsuBinarize();
     Image newIm2 = im2.otsuBinarize();
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -299,7 +197,7 @@ Image addition(Image &im1, Image &im2)
     }
     int Max = im1.gray;
     int pixel = 0, val = 0;
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -322,7 +220,7 @@ Image subtraction(Image &im1, Image &im2)
     }
     int Max = im1.gray;
     int pixel = 0, val = 0;
-    Image newImage = Image(im1.rows, im1.cols, im1.gray, false);
+    Image newImage = Image(im1.rows, im1.cols, im1.gray);
     for (int i = 0; i < im1.rows; i++)
     {
         for (int j = 0; j < im1.cols; j++)
@@ -342,7 +240,7 @@ Image multiplication(Image &im, double ratio)
     double pixel = 0;
     double val = 0;
     int Max = im.gray;
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
     for (int i = 0; i < im.rows; i++)
     {
         for (int j = 0; j < im.cols; j++)
@@ -374,9 +272,9 @@ Image multiplication(Image &im, double ratio)
  * @param kSize - The size of the mask is an odd integer like 3, 5, 7 … etc.
  * @param kernel- The mask itself
  */
-/* Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
+Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
 
     // find center position of kernel (half of kernel size)
     int kCenter = kSize / 2;
@@ -419,71 +317,11 @@ Image multiplication(Image &im, double ratio)
     }
 
     return newImage;
-} */
-
-Image convolution(Image &im, double kernel[SIZE][SIZE], int kSize, int norm)
-{
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
-    int kCenter = kSize / 2;
-
-    // Original per-pixel code, with edge clamping: used only for border pixels
-    auto borderPixel = [&](int i, int j) {
-        double sum = 0;
-        for (int m = 0; m < kSize; ++m) {
-            int mm = kSize - 1 - m;
-            for (int n = 0; n < kSize; ++n) {
-                int nn = kSize - 1 - n;
-                int ii = i + (m - kCenter);
-                int jj = j + (n - kCenter);
-                if (ii < 0) ii = ii + 1;
-                if (jj < 0) jj = jj + 1;
-                if (ii >= im.rows) ii = ii - 1;
-                if (jj >= im.cols) jj = jj - 1;
-                if (ii >= 0 && ii < im.rows && jj >= 0 && jj < im.cols)
-                    sum += im.getPixelVal(ii, jj) * kernel[mm][nn];
-            }
-        }
-        double val = sum / norm;
-        val = val < 0 ? 0 : min(val, im.gray);
-        newImage.setPixelVal(i, j, (int)val);
-    };
-
-    int iStart = kCenter, iEnd = im.rows - kCenter;   // interior rows: [iStart, iEnd)
-    int jStart = kCenter, jEnd = im.cols - kCenter;   // interior cols: [jStart, jEnd)
-    int jRight = jEnd > jStart ? jEnd : jStart;       // where the right border starts
-
-    #pragma omp parallel for schedule(static)   
-    for (int i = 0; i < im.rows; ++i)
-    {
-        if (i < iStart || i >= iEnd) {                // top or bottom border row
-            for (int j = 0; j < im.cols; ++j) borderPixel(i, j);
-            continue;
-        }
-        for (int j = 0; j < jStart; ++j) borderPixel(i, j);       // left border
-
-        for (int j = jStart; j < jEnd; ++j)                       // interior: no tests
-        {
-            double sum = 0;
-            for (int m = 0; m < kSize; ++m) {
-                int mm = kSize - 1 - m;
-                for (int n = 0; n < kSize; ++n) {
-                    int nn = kSize - 1 - n;
-                    sum += im.getPixelVal(i + m - kCenter, j + n - kCenter) * kernel[mm][nn];
-                }
-            }
-            double val = sum / norm;
-            val = val < 0 ? 0 : min(val, im.gray);
-            newImage.setPixelVal(i, j, (int)val);
-        }
-
-        for (int j = jRight; j < im.cols; ++j) borderPixel(i, j); // right border
-    }
-    return newImage;
 }
 
 Image convo2D(Image &im, double kernel[2][2], int kSize, int norm)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
 
     // find center position of kernel (half of kernel size)
     int kCenter = kSize / 2;
@@ -654,7 +492,7 @@ double luminance(Image &im)
 
 Image linearContrast(Image &im)
 { //Amelioration de contrast lineaire
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
     int mini = minPixel(im);
     int maxi = maxPixel(im), pixel = 0;
     int val = 0;
@@ -681,7 +519,7 @@ Image linearContrastSaturation(Image &im, double sMin, double sMax)
         cout << "Valeurs de saturation invalides" << endl;
         exit(1);
     }
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
     int val = 0, pixel = 0;
 
     for (int i = 0; i < im.rows; i++)
@@ -701,7 +539,7 @@ Image linearContrastSaturation(Image &im, double sMin, double sMax)
 
 Image histogramEquilization(Image &im)
 {
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
     int pixel = 0, val = 0;
     //On utilise les doubles ici pour eviter la perte de l'information pendant la division!
     std::vector<double> histogram(im.gray + 1, 0);
@@ -785,7 +623,7 @@ Image scalingNN(Image &im, double scale)
 
     std::vector<int> temp(destH * destW, 0);
     int px = 0, py = 0, pixel = 0;
-    Image newImage = Image(destH, destW, im.gray, false);
+    Image newImage = Image(destH, destW, im.gray);
     for (int i = 0; i < destH; i++)
     {
         for (int j = 0; j < destW; j++)
@@ -812,7 +650,7 @@ Image scalingNN(Image &im, double scale)
 Image mirror(Image &im)
 {
     //Calculates the mirror of the input image
-    Image newImage = Image(im.rows, im.cols, im.gray, false);
+    Image newImage = Image(im.rows, im.cols, im.gray);
     int pixel = 0;
 
     for (int i = 0; i < im.rows; i++)

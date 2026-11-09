@@ -17,15 +17,18 @@ Image::Image() {
     pixelVal = NULL;
 }
 
-Image::Image(int numRows, int numCols, int grayLevels, bool zeroFill) {
+Image::Image(int numRows, int numCols, int grayLevels) {
     rows = numRows;
     cols = numCols;
     gray = grayLevels;
 
-    pixelVal = new int[rows * cols];
-    if (zeroFill) {
-        for (int k = 0; k < rows * cols; k++) 
-            pixelVal[k] = 0;
+    pixelVal = new int*[rows];
+    for (int i = 0; i < rows; i++) {
+        pixelVal[i] = new int[cols];
+        for (int j = 0; j < cols; j++) {
+            pixelVal[i][j] = 0;
+        }
+
     }
 }
 
@@ -34,35 +37,33 @@ Image::Image(const Image& oldImage) {
     cols = oldImage.cols;
     gray = oldImage.gray;
 
-    pixelVal = new int[rows * cols];
-    for (int k = 0; k < rows * cols; k++) {
-        pixelVal[k] = oldImage.pixelVal[k];
+    pixelVal = new int* [rows];
+    for (int i = 0; i < rows; i++) {
+        pixelVal[i] = new int [cols];
+        for (int j = 0; j < cols; j++)
+            pixelVal[i][j] = oldImage.pixelVal[i][j];
     }
 }
 
 Image::~Image() {
-    delete[] pixelVal;
-
-    // removed for 1D array implementation
-/*     rows = 0;
+    rows = 0;
     cols = 0;
     gray = 0;
 
     for (int i = 0; i < rows; i++)
         delete pixelVal [rows];
 
-    delete pixelVal; */
+    delete pixelVal;
 }
 
-/* int Image::getPixelVal(int row, int col) const
-//returns the gray value of a specific pixel {
-    return pixelVal[row * cols + col];
+int Image::getPixelVal(int row, int col)
+/*returns the gray value of a specific pixel*/ {
+    return pixelVal[row][col];
 }
 
 void Image::setPixelVal(int row, int col, int value) {
-    pixelVal[row * cols + col] = value;
-} 
-    */
+    pixelVal[row][col] = value;
+}
 
 bool Image::inBounds(int row, int col)
 /*checks to see if a pixel is within the image, returns true or false*/ {
@@ -74,7 +75,7 @@ bool Image::inBounds(int row, int col)
 
 /* Image Image::threshold(int threshold) {
     int pixel = 0, val = 0;
-    Image newImage(rows, cols, gray, false);
+    Image newImage(rows, cols, gray);
     for (int i = 0; i < rows; i++) {
         for (int j = 0; j < cols; j++) {
             pixel = this->getPixelVal(i, j);

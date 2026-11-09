@@ -6,25 +6,12 @@
 #include "Functions.hpp"
 #include <string.h>
 #include <cstdio>
-#include <string>
 
 Image runOperation(int argc, char **argv);
 Image runOp3(char **argv);
 Image runOp4(char **argv);
 Image runOp5(char **argv);
 void printHelp();
-
-// Append v as decimal text plus '\n': the same characters as ofile << v << '\n'
-static inline void appendInt(std::string &out, int v)
-{
-    char tmp[12];
-    int n = 0;
-    unsigned u = v < 0 ? 0u - (unsigned)v : (unsigned)v;
-    do { tmp[n++] = (char)('0' + u % 10); u /= 10; } while (u);   // digits, last first
-    if (v < 0) out.push_back('-');
-    while (n) out.push_back(tmp[--n]);                              // copy them in the right order
-    out.push_back('\n');
-}
 
 int main(int argc, char **argv)
 {
@@ -45,35 +32,21 @@ int main(int argc, char **argv)
     //write to the output file
     ofile << "P2\n"
           << imageOut.cols << " " << imageOut.rows << "\n255\n";
-/*     for (int i = 0; i < imageOut.rows; i++)
+    for (int i = 0; i < imageOut.rows; i++)
     {
         for (int j = 0; j < imageOut.cols; j++)
         {
+            //ofile << imageOut.getPixelVal(i, j) << endl;
             ofile << imageOut.getPixelVal(i, j) << '\n';
         }
-    } */
+    }
 
-/*     std::string out;
+    std::string out;
     out.reserve((size_t)imageOut.rows * imageOut.cols * 4);   // up to "255\n" per pixel
     for (int i = 0; i < imageOut.rows; i++) {
         for (int j = 0; j < imageOut.cols; j++) {
             appendInt(out, imageOut.getPixelVal(i, j));
         }
-    }
-
-    ofile.write(out.data(), out.size());
-*/
-    int R = imageOut.rows, C = imageOut.cols;
-    std::vector<std::string> rowText(R);
-    #pragma omp parallel for schedule(static)
-    for (int i = 0; i < R; i++) {                     // format rows in parallel
-        rowText[i].reserve((size_t)C * 4);
-        for (int j = 0; j < C; j++) {
-            appendInt(rowText[i], imageOut.getPixelVal(i, j));
-        }
-    }
-    for (int i = 0; i < R; i++) {               // write them in order (serial)
-        ofile.write(rowText[i].data(), rowText[i].size());
     }
 
     double t2 = now_ms();
@@ -297,6 +270,6 @@ void printHelp()
            "- To ADD two images: ./app images/lena.pgm add images/aya.pgm\n"
            "- To MULT an image by 2: ./app mult 2 images/lena.pgm \n"
            "- See README for more info on other operations\n"
-           " Note: from bestseq file.\n"
+           " Note: from baseline file.\n"
            "---------------------------------------------\n");  
 }
